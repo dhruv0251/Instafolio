@@ -104,8 +104,8 @@ export default function ProfileHeader({ profile, counts, education }: ProfileHea
         
         <div className="flex items-center gap-2 mt-4">
             <Button asChild size="sm">
-                <a href={profile.links.resume} download>
-                  <Download className="mr-2 h-4 w-4" /> Download Resume
+                <a href={profile.links.resume} target="_blank" rel="noopener noreferrer">
+                  <Download className="mr-2 h-4 w-4" /> View Resume
                 </a>
             </Button>
             <Button variant="secondary" size="sm" onClick={() => setContactModalOpen(true)}>
