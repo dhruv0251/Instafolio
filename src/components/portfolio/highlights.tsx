@@ -51,7 +51,7 @@ export default function Highlights({ highlights }: HighlightsProps) {
                 <selectedHighlight.icon className="h-12 w-12 text-primary" />
               </div>
               <DialogTitle className="text-2xl">{selectedHighlight.text}</DialogTitle>
-              <DialogDescription className="text-base pt-2 text-foreground">
+              <DialogDescription className="text-base pt-2 text-foreground whitespace-pre-wrap">
                 {selectedHighlight.description}
               </DialogDescription>
             </DialogHeader>

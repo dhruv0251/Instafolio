@@ -30,3 +30,29 @@ export const VscodeIcon = (props: React.SVGProps<SVGSVGElement>) => (
     <path d="M21.16,6.28,18.88,3.95a2.5,2.5,0,0,0-3.54,0L4,15.29V20H8.71l11.34-11.34a2.5,2.5,0,0,0,0-3.54ZM8,18H6V16l8-8,2,2Z" />
   </svg>
 );
+
+export const CppIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+    <text x="4" y="18" fontFamily="monospace" fontSize="18" fill="currentColor">C++</text>
+  </svg>
+);
+
+export const DataScienceIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+    <path d="M17.5 17.5l4.5 4.5" />
+    <path d="M11 19a8 8 0 100-16 8 8 0 000 16z" />
+    <path d="M11 11L5 5" />
+    <path d="M17 5L11 11" />
+  </svg>
+);
+
+export const NlpIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+    <path d="M3 10h2" />
+    <path d="M4 10a8 8 0 1115.1 6.3" />
+    <path d="M21 10h-2" />
+    <path d="M12 10V3" />
+    <path d="M12 10l-4 4" />
+    <path d="M12 10l4 4" />
+  </svg>
+);

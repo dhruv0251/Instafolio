@@ -1,7 +1,7 @@
 
 import type { LucideIcon } from 'lucide-react';
 import { BrainCircuit, GraduationCap, Code, GitMerge, Film, Gamepad2, Share2, Layers, Cpu, Network, TestTube, Briefcase } from 'lucide-react';
-import { PythonIcon, TensorFlowIcon, PyTorchIcon, NextjsIcon, VscodeIcon } from '@/components/icons';
+import { PythonIcon, TensorFlowIcon, PyTorchIcon, NextjsIcon, VscodeIcon, CppIcon, DataScienceIcon, NlpIcon } from '@/components/icons';
 import imageData from './placeholder-images.json';
 
 const images = imageData.placeholderImages;
@@ -96,13 +96,13 @@ export const portfolioData: PortfolioData = {
   highlights: [
     { icon: BrainCircuit, text: 'Machine Learning', description: 'Extensive experience with supervised, unsupervised, and reinforcement learning models. Skilled in building and deploying predictive models.' },
     { icon: PythonIcon, text: 'Python', description: 'Highly proficient in Python for data science, web development (Flask, Django), and creating automation scripts.' },
+    { icon: DataScienceIcon, text: 'Data Science Libraries', description: 'Proficient with essential data science libraries including: \n- NumPy for numerical computation.\n- Pandas for data manipulation and analysis.\n- Scikit-learn for classical machine learning algorithms.\n- Keras for high-level deep learning models.' },
     { icon: TensorFlowIcon, text: 'TensorFlow', description: 'Expertise in building, training, and optimizing deep learning models for various applications using TensorFlow and Keras.' },
     { icon: PyTorchIcon, text: 'PyTorch', description: 'Adept at using PyTorch for its flexibility and dynamic computational graph, ideal for research and complex neural network architectures.' },
+    { icon: NlpIcon, text: 'NLP', description: 'Experience in Natural Language Processing (NLP) techniques for tasks like sentiment analysis, text classification, and named entity recognition using libraries like Hugging Face and NLTK.' },
+    { icon: CppIcon, text: 'C++', description: 'Solid understanding of C++ for performance-critical applications and competitive programming. Familiar with data structures, algorithms, and object-oriented principles.'},
     { icon: NextjsIcon, text: 'Next.js', description: 'Building high-performance, server-rendered React applications with Next.js, focusing on SEO and user experience.' },
-    { icon: GraduationCap, text: 'B.Tech AI/ML', description: 'Pursuing a Bachelor of Technology in Artificial Intelligence and Machine Learning, with a strong academic record.' },
-    { icon: VscodeIcon, text: 'VS Code', description: 'My code editor of choice, customized with extensions for a productive development workflow.' },
     { icon: GitMerge, text: 'Git', description: 'Proficient with Git for version control, including branching, merging, and collaborating in team environments.' },
-    { icon: TestTube, text: 'Colab', description: 'Utilizing Google Colab for its free GPU resources to train deep learning models and conduct experimental research.' },
     { icon: Film, text: 'Video Editing', description: 'Passionate about visual storytelling, with skills in video editing, color grading, and motion graphics using Adobe Premiere Pro.' },
     { icon: Gamepad2, text: 'Gaming', description: 'An avid gamer who enjoys competitive strategy games and exploring immersive open-world RPGs.' },
   ],
@@ -160,9 +160,9 @@ export const portfolioData: PortfolioData = {
     {
       id: 'cert-2',
       type: 'certificate',
-      title: 'Canara Aspire Certification',
-      shortDescription: 'Advanced Python Programming.',
-      longDescription: 'Achieved certification in Advanced Python Programming from Canara Aspire, focusing on performance optimization, advanced data structures, and concurrent programming.',
+      title: 'Product Management- Self Paced- Coursera',
+      shortDescription: 'Roadmap planning, user research, and feature prioritization.',
+      longDescription: 'Completed the Product Management – Self Paced program on Coursera, gaining a structured understanding of the full product lifecycle from identifying user needs and conducting market research to defining MVPs, prioritizing features, and managing stakeholder communication. The course also focused on metrics-driven decision-making and agile execution, helping me build a product mindset that balances user value with business goals.',
       imageUrl: findImage('certificate-2').imageUrl,
       imageHint: findImage('certificate-2').imageHint,
     },
