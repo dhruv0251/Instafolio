@@ -1,8 +1,20 @@
+
+"use client";
+
 import Image from 'next/image';
+import { useState } from 'react';
 import type { ProfileData } from '@/lib/data';
 import { Button } from '@/components/ui/button';
-import { Github, Linkedin, Mail, Download } from 'lucide-react';
+import { Github, Linkedin, Mail, Download, Phone, Copy } from 'lucide-react';
 import { ThemeToggle } from '@/components/theme-toggle';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+} from '@/components/ui/dialog';
+import { useToast } from "@/hooks/use-toast";
 
 interface ProfileHeaderProps {
   profile: ProfileData;
@@ -21,18 +33,35 @@ const StatItem = ({ count, label }: { count: number, label: string }) => (
 );
 
 export default function ProfileHeader({ profile, counts }: ProfileHeaderProps) {
+  const [isContactModalOpen, setContactModalOpen] = useState(false);
+  const { toast } = useToast();
+
+  const copyToClipboard = (text: string, type: string) => {
+    navigator.clipboard.writeText(text).then(() => {
+      toast({
+        title: `${type} Copied!`,
+        description: `${text} has been copied to your clipboard.`,
+      });
+    });
+  };
+  
+  const emailAddress = profile.links.email.replace('mailto:', '');
+  const phoneNumber = profile.links.phone.replace('tel:', '');
+
   return (
     <header className="flex flex-col sm:flex-row items-center gap-6 sm:gap-10">
       <div className="flex-shrink-0">
-        <Image
-          src={profile.avatar.url}
-          alt={profile.name}
-          width={150}
-          height={150}
-          className="rounded-full border-4 border-card shadow-md object-cover"
-          data-ai-hint={profile.avatar.hint}
-          priority
-        />
+        <div className="w-[150px] h-[150px] rounded-full overflow-hidden border-4 border-card shadow-md">
+          <Image
+            src={profile.avatar.url}
+            alt={profile.name}
+            width={150}
+            height={150}
+            className="object-cover w-full h-full"
+            data-ai-hint={profile.avatar.hint}
+            priority
+          />
+        </div>
       </div>
 
       <div className="flex-grow w-full">
@@ -76,13 +105,42 @@ export default function ProfileHeader({ profile, counts }: ProfileHeaderProps) {
                   <Download className="mr-2 h-4 w-4" /> Download Resume
                 </a>
             </Button>
-            <Button asChild variant="secondary" size="sm">
-                <a href={profile.links.email}>
-                  <Mail className="mr-2 h-4 w-4" /> Contact Me
-                </a>
+            <Button variant="secondary" size="sm" onClick={() => setContactModalOpen(true)}>
+                <Mail className="mr-2 h-4 w-4" /> Contact Me
             </Button>
         </div>
       </div>
+
+      <Dialog open={isContactModalOpen} onOpenChange={setContactModalOpen}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle>Contact Information</DialogTitle>
+            <DialogDescription>
+              You can reach me via email or phone.
+            </DialogDescription>
+          </DialogHeader>
+          <div className="space-y-4">
+            <div className="flex items-center justify-between rounded-lg border p-3">
+              <div className="flex items-center gap-3">
+                <Mail className="h-5 w-5 text-muted-foreground" />
+                <a href={profile.links.email} className="text-sm font-medium hover:underline">{emailAddress}</a>
+              </div>
+              <Button variant="ghost" size="icon" className="h-8 w-8" onClick={() => copyToClipboard(emailAddress, 'Email')}>
+                <Copy className="h-4 w-4" />
+              </Button>
+            </div>
+            <div className="flex items-center justify-between rounded-lg border p-3">
+              <div className="flex items-center gap-3">
+                <Phone className="h-5 w-5 text-muted-foreground" />
+                <a href={profile.links.phone} className="text-sm font-medium hover:underline">{phoneNumber}</a>
+              </div>
+               <Button variant="ghost" size="icon" className="h-8 w-8" onClick={() => copyToClipboard(phoneNumber, 'Phone Number')}>
+                <Copy className="h-4 w-4" />
+              </Button>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
     </header>
   );
 }

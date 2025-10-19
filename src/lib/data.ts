@@ -1,3 +1,4 @@
+
 import type { LucideIcon } from 'lucide-react';
 import { BrainCircuit, GraduationCap, Code, GitMerge, Film, Gamepad2, Share2, Layers, Cpu, Network, TestTube, Briefcase } from 'lucide-react';
 import { PythonIcon, TensorFlowIcon, PyTorchIcon, NextjsIcon, VscodeIcon } from '@/components/icons';
@@ -20,12 +21,14 @@ export interface ProfileData {
     linkedin: string;
     email: string;
     resume: string;
+    phone: string;
   };
 }
 
 export interface HighlightItem {
   icon: React.ElementType;
   text: string;
+  description: string;
 }
 
 export interface Post {
@@ -39,10 +42,18 @@ export interface Post {
   link?: string;
 }
 
+export interface EducationItem {
+  degree: string;
+  institution: string;
+  period: string;
+  details?: string;
+}
+
 interface PortfolioData {
   profile: ProfileData;
   highlights: HighlightItem[];
   posts: Post[];
+  education: EducationItem[];
 }
 
 export const portfolioData: PortfolioData = {
@@ -58,21 +69,22 @@ export const portfolioData: PortfolioData = {
       github: 'https://github.com/example',
       linkedin: 'https://linkedin.com/in/example',
       email: 'mailto:dhruvgola@example.com',
+      phone: 'tel:+1234567890',
       resume: '/resume.pdf',
     },
   },
   highlights: [
-    { icon: BrainCircuit, text: 'Machine Learning' },
-    { icon: PythonIcon, text: 'Python' },
-    { icon: TensorFlowIcon, text: 'TensorFlow' },
-    { icon: PyTorchIcon, text: 'PyTorch' },
-    { icon: NextjsIcon, text: 'Next.js' },
-    { icon: GraduationCap, text: 'B.Tech AI/ML' },
-    { icon: VscodeIcon, text: 'VS Code' },
-    { icon: GitMerge, text: 'Git' },
-    { icon: TestTube, text: 'Colab' },
-    { icon: Film, text: 'Video Editing' },
-    { icon: Gamepad2, text: 'Gaming' },
+    { icon: BrainCircuit, text: 'Machine Learning', description: 'Experience with supervised, unsupervised, and reinforcement learning models.' },
+    { icon: PythonIcon, text: 'Python', description: 'Proficient in Python for data science, web development, and automation.' },
+    { icon: TensorFlowIcon, text: 'TensorFlow', description: 'Building and training deep learning models with TensorFlow and Keras.' },
+    { icon: PyTorchIcon, text: 'PyTorch', description: 'Skilled in using PyTorch for flexible and dynamic neural network development.' },
+    { icon: NextjsIcon, text: 'Next.js', description: 'Creating server-rendered React applications with Next.js for performance.' },
+    { icon: GraduationCap, text: 'B.Tech AI/ML', description: 'Bachelor of Technology in Artificial Intelligence and Machine Learning.' },
+    { icon: VscodeIcon, text: 'VS Code', description: 'My code editor of choice for its power and extensibility.' },
+    { icon: GitMerge, text: 'Git', description: 'Using Git for version control in both personal and collaborative projects.' },
+    { icon: TestTube, text: 'Colab', description: 'Leveraging Google Colab for training models and collaborative research.' },
+    { icon: Film, text: 'Video Editing', description: 'Passionate about storytelling through video editing and visual effects.' },
+    { icon: Gamepad2, text: 'Gaming', description: 'I enjoy strategy games and exploring immersive virtual worlds.' },
   ],
   posts: [
     {
@@ -162,4 +174,23 @@ export const portfolioData: PortfolioData = {
       imageHint: findImage('certificate-3').imageHint,
     },
   ],
+  education: [
+    {
+      degree: 'Bachelor of Technology in AI & Machine Learning',
+      institution: 'University of Technology',
+      period: '2020 - 2024',
+      details: 'Graduated with honors, focusing on deep learning and computer vision.'
+    },
+    {
+      degree: 'Higher Secondary Certificate (Class 12th)',
+      institution: 'City Public School',
+      period: '2019 - 2020',
+      details: 'Focused on Science stream with Computer Science.'
+    },
+    {
+      degree: 'Secondary School Certificate (Class 10th)',
+      institution: 'City Public School',
+      period: '2017 - 2018',
+    }
+  ]
 };
