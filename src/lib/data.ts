@@ -8,6 +8,8 @@ const images = imageData.placeholderImages;
 
 const findImage = (id: string) => images.find(img => img.id === id) || images[0];
 
+// INTERFACE DEFINITIONS
+// Defines the structure for your profile information
 export interface ProfileData {
   name: string;
   title: string;
@@ -25,12 +27,14 @@ export interface ProfileData {
   };
 }
 
+// Defines the structure for each skill highlight
 export interface HighlightItem {
   icon: React.ElementType;
   text: string;
   description: string;
 }
 
+// Defines the structure for each post (project, certificate, or achievement)
 export interface Post {
   id: string;
   type: 'project' | 'certificate' | 'achievement';
@@ -42,6 +46,7 @@ export interface Post {
   link?: string;
 }
 
+// Defines the structure for each education entry
 export interface EducationItem {
   degree: string;
   institution: string;
@@ -49,6 +54,7 @@ export interface EducationItem {
   details?: string;
 }
 
+// Defines the overall structure of all your portfolio data
 export interface PortfolioData {
   profile: ProfileData;
   highlights: HighlightItem[];
@@ -56,7 +62,12 @@ export interface PortfolioData {
   education: EducationItem[];
 }
 
+// PORTFOLIO DATA
+// This is where you can edit your personal information.
+// You can change your name, title, bio, links, skills, projects, and education.
+
 export const portfolioData: PortfolioData = {
+  // To change your profile information, edit the values below
   profile: {
     name: 'Dhruv Gola',
     title: 'AI/ML Engineer',
@@ -70,9 +81,11 @@ export const portfolioData: PortfolioData = {
       linkedin: 'https://linkedin.com/in/example',
       email: 'mailto:dhruvgola@example.com',
       phone: 'tel:+1234567890',
-      resume: '/resume.pdf',
+      resume: '/resume.pdf', // You can place your resume in the `public` folder
     },
   },
+  // To change your skills, edit the array below. 
+  // You can add or remove skills, change icons, text and descriptions.
   highlights: [
     { icon: BrainCircuit, text: 'Machine Learning', description: 'Extensive experience with supervised, unsupervised, and reinforcement learning models. Skilled in building and deploying predictive models.' },
     { icon: PythonIcon, text: 'Python', description: 'Highly proficient in Python for data science, web development (Flask, Django), and creating automation scripts.' },
@@ -86,6 +99,7 @@ export const portfolioData: PortfolioData = {
     { icon: Film, text: 'Video Editing', description: 'Passionate about visual storytelling, with skills in video editing, color grading, and motion graphics using Adobe Premiere Pro.' },
     { icon: Gamepad2, text: 'Gaming', description: 'An avid gamer who enjoys competitive strategy games and exploring immersive open-world RPGs.' },
   ],
+  // To change your projects, certificates, or achievements, edit the array below.
   posts: [
     {
       id: 'proj-1',
@@ -174,6 +188,7 @@ export const portfolioData: PortfolioData = {
       imageHint: findImage('certificate-3').imageHint,
     },
   ],
+  // To change your education details, edit the array below
   education: [
     {
       degree: 'Bachelor of Technology in AI & Machine Learning',
