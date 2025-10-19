@@ -2,17 +2,21 @@ import { portfolioData, Post } from '@/lib/data';
 import ProfileHeader from '@/components/portfolio/profile-header';
 import Highlights from '@/components/portfolio/highlights';
 import PostsGrid from '@/components/portfolio/posts-grid';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Briefcase, GraduationCap } from 'lucide-react';
 import Footer from '@/components/portfolio/footer';
 
 export default function Home() {
   const { profile, highlights, posts } = portfolioData;
 
-  const postCounts = posts.reduce((acc, post) => {
-    if (post.type === 'project') acc.projects++;
-    if (post.type === 'certificate') acc.certificates++;
-    if (post.type === 'achievement') acc.achievements++;
-    return acc;
-  }, { projects: 0, certificates: 0, achievements: 0 });
+  const projects = posts.filter(p => p.type === 'project');
+  const certificatesAndAchievements = posts.filter(p => p.type === 'certificate' || p.type === 'achievement');
+
+  const postCounts = {
+    projects: projects.length,
+    certificates: certificatesAndAchievements.length,
+    skills: highlights.length,
+  };
 
   return (
     <div className="flex flex-col min-h-screen bg-background">
@@ -23,7 +27,24 @@ export default function Home() {
           <div className="my-8">
             <hr className="border-border" />
           </div>
-          <PostsGrid posts={posts} />
+          <Tabs defaultValue="projects" className="w-full">
+            <TabsList className="grid w-full grid-cols-2">
+              <TabsTrigger value="projects">
+                <Briefcase className="mr-2 h-4 w-4" />
+                Projects
+              </TabsTrigger>
+              <TabsTrigger value="certs">
+                <GraduationCap className="mr-2 h-4 w-4" />
+                Certificates & Achievements
+              </TabsTrigger>
+            </TabsList>
+            <TabsContent value="projects" className="mt-6">
+              <PostsGrid posts={projects} />
+            </TabsContent>
+            <TabsContent value="certs" className="mt-6">
+              <PostsGrid posts={certificatesAndAchievements} />
+            </TabsContent>
+          </Tabs>
         </div>
       </main>
       <Footer />
