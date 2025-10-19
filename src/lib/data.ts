@@ -77,10 +77,10 @@ export const portfolioData: PortfolioData = {
       hint: findImage('profile').imageHint,
     },
     links: {
-      github: 'https://github.com/example',
-      linkedin: 'https://linkedin.com/in/example',
-      email: 'mailto:dhruvgola@example.com',
-      phone: 'tel:+1234567890',
+      github: 'https://github.com/dhruv2509',
+      linkedin: 'https://www.linkedin.com/in/dhruv-gola-654242316/',
+      email: 'mailto:dhruv.0570.gola@gmail.com',
+      phone: 'tel:+919873079928',
       resume: '/resume.pdf', // You can place your resume in the `public` folder
     },
   },
