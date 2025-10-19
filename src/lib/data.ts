@@ -103,7 +103,6 @@ export const portfolioData: PortfolioData = {
     { icon: CppIcon, text: 'C++', description: 'Solid understanding of C++ for performance-critical applications and competitive programming. Familiar with data structures, algorithms, and object-oriented principles.'},
     { icon: NextjsIcon, text: 'Next.js', description: 'Building high-performance, server-rendered React applications with Next.js, focusing on SEO and user experience.' },
     { icon: GitMerge, text: 'Git', description: 'Proficient with Git for version control, including branching, merging, and collaborating in team environments.' },
-    { icon: Film, text: 'Video Editing', description: 'Passionate about visual storytelling, with skills in video editing, color grading, and motion graphics using Adobe Premiere Pro.' },
     { icon: Gamepad2, text: 'Gaming', description: 'An avid gamer who enjoys competitive strategy games and exploring immersive open-world RPGs.' },
   ],
   // To change your projects, certificates, or achievements, edit the array below.
