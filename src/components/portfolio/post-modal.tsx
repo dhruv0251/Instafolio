@@ -19,6 +19,19 @@ interface PostModalProps {
 }
 
 export default function PostModal({ post, isOpen, onClose }: PostModalProps) {
+  const getButtonText = () => {
+    switch (post.type) {
+      case 'project':
+        return 'View Project';
+      case 'certificate':
+        return 'View Certificate';
+      case 'achievement':
+        return 'View Proof';
+      default:
+        return 'View';
+    }
+  };
+
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-[600px] p-0">
@@ -42,7 +55,7 @@ export default function PostModal({ post, isOpen, onClose }: PostModalProps) {
             <Button asChild>
               <a href={post.link} target="_blank" rel="noopener noreferrer">
                 <LinkIcon className="mr-2 h-4 w-4" />
-                View Project
+                {getButtonText()}
               </a>
             </Button>
           </div>

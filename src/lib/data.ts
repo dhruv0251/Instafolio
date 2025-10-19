@@ -88,7 +88,7 @@ export const portfolioData: PortfolioData = {
       email: 'mailto:dhruv.0570.gola@gmail.com',
       phone: 'tel:+919873079928',
       // IMPORTANT: Replace this with the public link to your resume
-      resume: 'https://your-resume-link.com/resume.pdf',
+      resume: 'https://drive.google.com/file/d/1evGZRdqAyDnXcwVPMKSakJrc8JLMeO4M/view?usp=sharing',
     },
   },
   // To change your skills, edit the array below. 
@@ -131,12 +131,12 @@ export const portfolioData: PortfolioData = {
     {
       id: 'cert-1',
       type: 'certificate',
-      title: 'Coursera ML Specialization',
-      shortDescription: 'Machine Learning by Andrew Ng.',
-      longDescription: 'Completed the comprehensive Machine Learning specialization on Coursera, taught by Andrew Ng. Covered topics from linear regression to deep learning and reinforcement learning.',
+      title: 'Generative AI: Fundamentals, Applications, and Challenges- University of Michigan',
+      shortDescription: 'Certified in “Generative AI: Fundamentals, Applications, and Challenges” by University of Michigan, covering core concepts, real-world use cases, and responsible AI practices.',
+      longDescription: 'The course provided in-depth knowledge of how large language models and generative systems operate, covering topics such as transformers, diffusion models, prompt engineering, and real-world applications across text, image, and audio generation. It also explored key limitations of AI, including bias, misinformation risks, and responsible AI deployment frameworks. This certification strengthened my ability to both build with and critically evaluate modern AI systems.',
       imageUrl: findImage('certificate-1').imageUrl,
       imageHint: findImage('certificate-1').imageHint,
-      link: '#',
+      link: 'https://www.coursera.org/account/accomplishments/verify/PSJDB96XI42G',
     },
     {
       id: 'ach-1',
@@ -199,21 +199,21 @@ export const portfolioData: PortfolioData = {
   education: [
     {
       degree: 'Bachelor of Technology in AI & Machine Learning',
-      institution: 'University of Technology',
-      period: '2020 - 2024',
-      details: 'Graduated with honors, focusing on deep learning and computer vision. CGPA: 8.5/10.'
+      institution: 'Vivekananda Institute of Professional Studies - Technical Campus',
+      period: '2022 - 2026',
+      details: 'Percentage - 80%'
     },
     {
       degree: 'Higher Secondary Certificate (Class 12th)',
-      institution: 'City Public School',
-      period: '2019 - 2020',
-      details: 'Focused on Science stream with Computer Science. Score: 95%.'
+      institution: 'Vidya Jain Public school - Rohini',
+      period: '2020 - 2022',
+      details: 'Score: 80%.'
     },
     {
       degree: 'Secondary School Certificate (Class 10th)',
-      institution: 'City Public School',
-      period: '2017 - 2018',
-      details: 'Score: 98%.'
+      institution: 'Vidya Jain Public school - Rohini',
+      period: '2008 - 2020',
+      details: 'Score: 88%.'
     }
   ]
 };
