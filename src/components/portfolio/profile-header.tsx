@@ -3,9 +3,9 @@
 
 import Image from 'next/image';
 import { useState } from 'react';
-import type { ProfileData } from '@/lib/data';
+import type { ProfileData, EducationItem } from '@/lib/data';
 import { Button } from '@/components/ui/button';
-import { Github, Linkedin, Mail, Download, Phone, Copy } from 'lucide-react';
+import { Github, Linkedin, Mail, Download, Phone, Copy, School } from 'lucide-react';
 import { ThemeToggle } from '@/components/theme-toggle';
 import {
   Dialog,
@@ -15,9 +15,11 @@ import {
   DialogDescription,
 } from '@/components/ui/dialog';
 import { useToast } from "@/hooks/use-toast";
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 interface ProfileHeaderProps {
   profile: ProfileData;
+  education: EducationItem[];
   counts: {
     projects: number;
     certificates: number;
@@ -32,8 +34,9 @@ const StatItem = ({ count, label }: { count: number, label: string }) => (
   </div>
 );
 
-export default function ProfileHeader({ profile, counts }: ProfileHeaderProps) {
+export default function ProfileHeader({ profile, counts, education }: ProfileHeaderProps) {
   const [isContactModalOpen, setContactModalOpen] = useState(false);
+  const [isEducationModalOpen, setEducationModalOpen] = useState(false);
   const { toast } = useToast();
 
   const copyToClipboard = (text: string, type: string) => {
@@ -108,6 +111,9 @@ export default function ProfileHeader({ profile, counts }: ProfileHeaderProps) {
             <Button variant="secondary" size="sm" onClick={() => setContactModalOpen(true)}>
                 <Mail className="mr-2 h-4 w-4" /> Contact Me
             </Button>
+             <Button variant="secondary" size="sm" onClick={() => setEducationModalOpen(true)}>
+                <School className="mr-2 h-4 w-4" /> Education
+            </Button>
         </div>
       </div>
 
@@ -141,6 +147,30 @@ export default function ProfileHeader({ profile, counts }: ProfileHeaderProps) {
           </div>
         </DialogContent>
       </Dialog>
+      
+      <Dialog open={isEducationModalOpen} onOpenChange={setEducationModalOpen}>
+        <DialogContent className="sm:max-w-lg">
+          <DialogHeader>
+            <DialogTitle>Education</DialogTitle>
+            <DialogDescription>My educational background and qualifications.</DialogDescription>
+          </DialogHeader>
+          <div className="grid gap-4 py-4">
+            {education.map((edu, index) => (
+              <Card key={index} className="transition-all duration-300 hover:shadow-lg hover:border-primary">
+                <CardHeader>
+                  <CardTitle>{edu.degree}</CardTitle>
+                  <p className="text-sm text-muted-foreground">{edu.institution}</p>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm">{edu.period}</p>
+                  {edu.details && <p className="text-sm mt-2 text-foreground/80">{edu.details}</p>}
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </DialogContent>
+      </Dialog>
+
     </header>
   );
 }

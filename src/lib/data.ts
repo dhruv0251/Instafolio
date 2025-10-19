@@ -49,7 +49,7 @@ export interface EducationItem {
   details?: string;
 }
 
-interface PortfolioData {
+export interface PortfolioData {
   profile: ProfileData;
   highlights: HighlightItem[];
   posts: Post[];
@@ -74,17 +74,17 @@ export const portfolioData: PortfolioData = {
     },
   },
   highlights: [
-    { icon: BrainCircuit, text: 'Machine Learning', description: 'Experience with supervised, unsupervised, and reinforcement learning models.' },
-    { icon: PythonIcon, text: 'Python', description: 'Proficient in Python for data science, web development, and automation.' },
-    { icon: TensorFlowIcon, text: 'TensorFlow', description: 'Building and training deep learning models with TensorFlow and Keras.' },
-    { icon: PyTorchIcon, text: 'PyTorch', description: 'Skilled in using PyTorch for flexible and dynamic neural network development.' },
-    { icon: NextjsIcon, text: 'Next.js', description: 'Creating server-rendered React applications with Next.js for performance.' },
-    { icon: GraduationCap, text: 'B.Tech AI/ML', description: 'Bachelor of Technology in Artificial Intelligence and Machine Learning.' },
-    { icon: VscodeIcon, text: 'VS Code', description: 'My code editor of choice for its power and extensibility.' },
-    { icon: GitMerge, text: 'Git', description: 'Using Git for version control in both personal and collaborative projects.' },
-    { icon: TestTube, text: 'Colab', description: 'Leveraging Google Colab for training models and collaborative research.' },
-    { icon: Film, text: 'Video Editing', description: 'Passionate about storytelling through video editing and visual effects.' },
-    { icon: Gamepad2, text: 'Gaming', description: 'I enjoy strategy games and exploring immersive virtual worlds.' },
+    { icon: BrainCircuit, text: 'Machine Learning', description: 'Extensive experience with supervised, unsupervised, and reinforcement learning models. Skilled in building and deploying predictive models.' },
+    { icon: PythonIcon, text: 'Python', description: 'Highly proficient in Python for data science, web development (Flask, Django), and creating automation scripts.' },
+    { icon: TensorFlowIcon, text: 'TensorFlow', description: 'Expertise in building, training, and optimizing deep learning models for various applications using TensorFlow and Keras.' },
+    { icon: PyTorchIcon, text: 'PyTorch', description: 'Adept at using PyTorch for its flexibility and dynamic computational graph, ideal for research and complex neural network architectures.' },
+    { icon: NextjsIcon, text: 'Next.js', description: 'Building high-performance, server-rendered React applications with Next.js, focusing on SEO and user experience.' },
+    { icon: GraduationCap, text: 'B.Tech AI/ML', description: 'Pursuing a Bachelor of Technology in Artificial Intelligence and Machine Learning, with a strong academic record.' },
+    { icon: VscodeIcon, text: 'VS Code', description: 'My code editor of choice, customized with extensions for a productive development workflow.' },
+    { icon: GitMerge, text: 'Git', description: 'Proficient with Git for version control, including branching, merging, and collaborating in team environments.' },
+    { icon: TestTube, text: 'Colab', description: 'Utilizing Google Colab for its free GPU resources to train deep learning models and conduct experimental research.' },
+    { icon: Film, text: 'Video Editing', description: 'Passionate about visual storytelling, with skills in video editing, color grading, and motion graphics using Adobe Premiere Pro.' },
+    { icon: Gamepad2, text: 'Gaming', description: 'An avid gamer who enjoys competitive strategy games and exploring immersive open-world RPGs.' },
   ],
   posts: [
     {
@@ -179,18 +179,19 @@ export const portfolioData: PortfolioData = {
       degree: 'Bachelor of Technology in AI & Machine Learning',
       institution: 'University of Technology',
       period: '2020 - 2024',
-      details: 'Graduated with honors, focusing on deep learning and computer vision.'
+      details: 'Graduated with honors, focusing on deep learning and computer vision. CGPA: 8.5/10.'
     },
     {
       degree: 'Higher Secondary Certificate (Class 12th)',
       institution: 'City Public School',
       period: '2019 - 2020',
-      details: 'Focused on Science stream with Computer Science.'
+      details: 'Focused on Science stream with Computer Science. Score: 95%.'
     },
     {
       degree: 'Secondary School Certificate (Class 10th)',
       institution: 'City Public School',
       period: '2017 - 2018',
+      details: 'Score: 98%.'
     }
   ]
 };

@@ -26,17 +26,17 @@ export default function Highlights({ highlights }: HighlightsProps) {
           {highlights.map((highlight, index) => (
             <div
               key={index}
-              className="flex flex-col items-center justify-center gap-2 text-center cursor-pointer"
+              className="flex flex-col items-center justify-center gap-2 text-center cursor-pointer group"
               onClick={() => setSelectedHighlight(highlight)}
               role="button"
               tabIndex={0}
               onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && setSelectedHighlight(highlight)}
               aria-label={`View details for ${highlight.text}`}
             >
-              <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-accent flex items-center justify-center border-2 border-border shadow-sm">
-                <highlight.icon className="h-8 w-8 sm:h-10 sm:w-10 text-muted-foreground" />
+              <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-accent flex items-center justify-center border-2 border-border shadow-sm transition-all duration-300 group-hover:border-primary group-hover:shadow-md group-hover:scale-105">
+                <highlight.icon className="h-8 w-8 sm:h-10 sm:w-10 text-muted-foreground transition-colors duration-300 group-hover:text-primary" />
               </div>
-              <span className="text-xs sm:text-sm font-medium text-foreground w-20 truncate">{highlight.text}</span>
+              <span className="text-xs sm:text-sm font-medium text-foreground w-20 truncate transition-colors duration-300 group-hover:text-primary">{highlight.text}</span>
             </div>
           ))}
         </div>
@@ -47,8 +47,8 @@ export default function Highlights({ highlights }: HighlightsProps) {
         <Dialog open={!!selectedHighlight} onOpenChange={() => setSelectedHighlight(null)}>
           <DialogContent className="sm:max-w-[425px]">
             <DialogHeader className="items-center text-center">
-              <div className="w-24 h-24 rounded-full bg-accent flex items-center justify-center border-4 border-border mb-4">
-                <selectedHighlight.icon className="h-12 w-12 text-muted-foreground" />
+              <div className="w-24 h-24 rounded-full bg-accent flex items-center justify-center border-4 border-primary mb-4">
+                <selectedHighlight.icon className="h-12 w-12 text-primary" />
               </div>
               <DialogTitle className="text-2xl">{selectedHighlight.text}</DialogTitle>
               <DialogDescription className="text-base pt-2 text-foreground">
