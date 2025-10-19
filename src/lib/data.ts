@@ -9,6 +9,12 @@ const images = imageData.placeholderImages;
 const findImage = (id: string) => images.find(img => img.id === id) || images[0];
 
 // INTERFACE DEFINITIONS
+/**
+ * @fileoverview This file contains all the data for your portfolio.
+ * You can edit your personal information, skills, projects, and education here.
+ * The images are managed in `src/lib/placeholder-images.json`.
+ */
+
 // Defines the structure for your profile information
 export interface ProfileData {
   name: string;
@@ -81,7 +87,8 @@ export const portfolioData: PortfolioData = {
       linkedin: 'https://www.linkedin.com/in/dhruv-gola-654242316/',
       email: 'mailto:dhruv.0570.gola@gmail.com',
       phone: 'tel:+919873079928',
-      resume: '/resume.pdf', // You can place your resume in the `public` folder
+      // IMPORTANT: Replace this with the public link to your resume
+      resume: 'https://your-resume-link.com/resume.pdf',
     },
   },
   // To change your skills, edit the array below. 
