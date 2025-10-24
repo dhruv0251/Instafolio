@@ -110,12 +110,12 @@ export const portfolioData: PortfolioData = {
     {
       id: 'proj-1',
       type: 'project',
-      title: 'ML Data Visualization',
-      shortDescription: 'Visualizing complex datasets.',
-      longDescription: 'This project focuses on using various machine learning techniques to create intuitive and interactive visualizations for large and complex datasets. Built with Python, Pandas, and Plotly.',
+      title: 'MeetMid',
+      shortDescription: 'Intelligent Midpoint-Based Meet-up Suggestion System',
+      longDescription: 'MeetMid is a web application that suggests a fair meeting point between two users. It uses the A* pathfinding algorithm to calculate an optimized midpoint based on real travel distance rather than simple geometric averaging. To improve accuracy, it also applies NLP-based sentiment analysis on place reviews to generate a sentiment score, ensuring that only genuinely well-reviewed locations are recommended. The system is built using Next.js and Google Maps APIs for geolocation, distance calculation, and place discovery.',
       imageUrl: findImage('project-1').imageUrl,
       imageHint: findImage('project-1').imageHint,
-      link: 'https://github.com/example/project-1',
+      link: 'https://meet-mid.vercel.app/',
     },
     {
       id: 'proj-2',
@@ -164,6 +164,8 @@ export const portfolioData: PortfolioData = {
       longDescription: 'Completed the Product Management – Self Paced program on Coursera, gaining a structured understanding of the full product lifecycle from identifying user needs and conducting market research to defining MVPs, prioritizing features, and managing stakeholder communication. The course also focused on metrics-driven decision-making and agile execution, helping me build a product mindset that balances user value with business goals.',
       imageUrl: findImage('certificate-2').imageUrl,
       imageHint: findImage('certificate-2').imageHint,
+      link: 'https://media.geeksforgeeks.org/courses/certificates/3271becbdabefb3501b3e3a36268f2e3.pdf',
+
     },
      {
       id: 'ach-2',
