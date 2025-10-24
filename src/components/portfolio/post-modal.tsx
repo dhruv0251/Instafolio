@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from 'next/image';
@@ -9,8 +10,7 @@ import {
   DialogTitle,
   DialogDescription,
 } from '@/components/ui/dialog';
-import { Button } from '@/components/ui/button';
-import { Link as LinkIcon } from 'lucide-react';
+import { InteractiveHoverButton } from '../ui/interactive-hover-button';
 
 interface PostModalProps {
   post: Post;
@@ -52,12 +52,7 @@ export default function PostModal({ post, isOpen, onClose }: PostModalProps) {
         </DialogHeader>
         {post.link && post.link !== '#' && (
           <div className="px-6 pb-6">
-            <Button asChild>
-              <a href={post.link} target="_blank" rel="noopener noreferrer">
-                <LinkIcon className="mr-2 h-4 w-4" />
-                {getButtonText()}
-              </a>
-            </Button>
+            <InteractiveHoverButton asChild text={getButtonText()} href={post.link} target="_blank" rel="noopener noreferrer" />
           </div>
         )}
       </DialogContent>

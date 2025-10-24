@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 import type { ProfileData, EducationItem } from '@/lib/data';
 import { Button } from '@/components/ui/button';
-import { Github, Linkedin, Mail, Download, Phone, Copy, School } from 'lucide-react';
+import { Github, Linkedin, Mail, Download, Phone, Copy, School, ArrowRight } from 'lucide-react';
 import { ThemeToggle } from '@/components/theme-toggle';
 import {
   Dialog,
@@ -16,6 +16,7 @@ import {
 } from '@/components/ui/dialog';
 import { useToast } from "@/hooks/use-toast";
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { InteractiveHoverButton } from '../ui/interactive-hover-button';
 
 interface ProfileHeaderProps {
   profile: ProfileData;
@@ -71,16 +72,8 @@ export default function ProfileHeader({ profile, counts, education }: ProfileHea
         <div className="flex flex-col sm:flex-row justify-between items-center mb-4">
           <h1 className="text-2xl sm:text-3xl font-bold text-foreground">{profile.name}</h1>
           <div className="flex items-center gap-2 mt-2 sm:mt-0">
-             <Button asChild variant="outline" size="sm">
-                <a href={profile.links.github} target="_blank" rel="noopener noreferrer">
-                  <Github className="mr-2 h-4 w-4" /> GitHub
-                </a>
-              </Button>
-              <Button asChild variant="outline" size="sm">
-                <a href={profile.links.linkedin} target="_blank" rel="noopener noreferrer">
-                  <Linkedin className="mr-2 h-4 w-4" /> LinkedIn
-                </a>
-              </Button>
+             <InteractiveHoverButton asChild text="GitHub" href={profile.links.github} target="_blank" rel="noopener noreferrer" />
+             <InteractiveHoverButton asChild text="LinkedIn" href={profile.links.linkedin} target="_blank" rel="noopener noreferrer" />
             <ThemeToggle />
           </div>
         </div>
@@ -102,18 +95,10 @@ export default function ProfileHeader({ profile, counts, education }: ProfileHea
           <StatItem count={counts.skills} label="Skills" />
         </div>
         
-        <div className="flex items-center gap-2 mt-4">
-            <Button asChild size="sm">
-                <a href={profile.links.resume} target="_blank" rel="noopener noreferrer">
-                  <Download className="mr-2 h-4 w-4" /> View Resume
-                </a>
-            </Button>
-            <Button variant="secondary" size="sm" onClick={() => setContactModalOpen(true)}>
-                <Mail className="mr-2 h-4 w-4" /> Contact Me
-            </Button>
-             <Button variant="secondary" size="sm" onClick={() => setEducationModalOpen(true)}>
-                <School className="mr-2 h-4 w-4" /> Education
-            </Button>
+        <div className="flex flex-wrap items-center gap-2 mt-4">
+            <InteractiveHoverButton asChild text="View Resume" href={profile.links.resume} target="_blank" rel="noopener noreferrer" />
+            <InteractiveHoverButton text="Contact Me" onClick={() => setContactModalOpen(true)} />
+            <InteractiveHoverButton text="Education" onClick={() => setEducationModalOpen(true)} />
         </div>
       </div>
 
