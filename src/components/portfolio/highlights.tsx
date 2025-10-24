@@ -34,11 +34,9 @@ export default function Highlights({ highlights }: HighlightsProps) {
               onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && setSelectedHighlight(highlight)}
               aria-label={`View details for ${highlight.text}`}
             >
-              <BackgroundGradient containerClassName="rounded-full" className="rounded-full bg-background dark:bg-zinc-900">
-                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-secondary flex items-center justify-center border-2 border-transparent shadow-sm transition-all duration-300 group-hover:scale-105">
-                  <highlight.icon className="h-8 w-8 sm:h-10 sm:w-10 text-muted-foreground transition-colors duration-300 group-hover:text-primary" />
-                </div>
-              </BackgroundGradient>
+              <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-secondary flex items-center justify-center border-2 border-card shadow-sm transition-all duration-300 group-hover:scale-105 group-hover:border-primary">
+                <highlight.icon className="h-8 w-8 sm:h-10 sm:w-10 text-muted-foreground transition-colors duration-300 group-hover:text-primary" />
+              </div>
               <span className="text-xs sm:text-sm font-medium text-foreground w-20 truncate transition-colors duration-300 group-hover:text-primary">{highlight.text}</span>
             </div>
           ))}
