@@ -47,7 +47,7 @@ export default function Home() {
               <hr className="border-border" />
             </div>
             
-            <Tabs defaultValue="projects" className="w-full">
+            <Tabs defaultValue="certs" className="w-full">
               <TabsList className="grid w-full grid-cols-2">
                 <TabsTrigger value="projects">
                   <Briefcase className="mr-2 h-4 w-4" />

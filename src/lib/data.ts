@@ -83,7 +83,7 @@ export const portfolioData: PortfolioData = {
       hint: findImage('profile').imageHint,
     },
     links: {
-      github: 'https://github.com/dhruv2509',
+      github: 'https://github.com/dhruv0251',
       linkedin: 'https://www.linkedin.com/in/dhruv-gola-654242316/',
       email: 'mailto:dhruv.0570.gola@gmail.com',
       phone: 'tel:+919873079928',
