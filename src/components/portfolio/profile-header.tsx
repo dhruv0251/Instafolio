@@ -30,7 +30,7 @@ interface ProfileHeaderProps {
 
 const StatItem = ({ count, label }: { count: number, label: string }) => (
   <div className="text-center">
-    <span className="font-bold text-lg sm:text-xl">{count}</span>
+    <span className="font-bold text-lg sm:text-xl text-foreground">{count}</span>
     <p className="text-xs sm:text-sm text-muted-foreground">{label}</p>
   </div>
 );
