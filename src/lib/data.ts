@@ -95,6 +95,7 @@ export const portfolioData: PortfolioData = {
   // You can add or remove skills, change icons, text and descriptions.
   highlights: [
     { icon: BrainCircuit, text: 'Machine Learning', description: 'Extensive experience with supervised, unsupervised, and reinforcement learning models. Skilled in building and deploying predictive models.' },
+    { icon: Network, text: 'Deep Learning', description: 'Specialized in Deep Learning architectures including:\n- Convolutional Neural Networks (CNNs) for image recognition.\n- Recurrent Neural Networks (RNNs) for sequence data.\n- Large Language Models (LLMs) and Generative AI (Gen AI) for advanced NLP tasks.' },
     { icon: PythonIcon, text: 'Python', description: 'Highly proficient in Python for data science, web development (Flask, Django), and creating automation scripts.' },
     { icon: DataScienceIcon, text: 'Data Science Libraries', description: 'Proficient with essential data science libraries including: \n- NumPy for numerical computation.\n- Pandas for data manipulation and analysis.\n- Scikit-learn for classical machine learning algorithms.\n- Keras for high-level deep learning models.' },
     { icon: TensorFlowIcon, text: 'TensorFlow', description: 'Expertise in building, training, and optimizing deep learning models for various applications using TensorFlow and Keras.' },
@@ -189,32 +190,30 @@ export const portfolioData: PortfolioData = {
     {
       id: 'cert-3',
       type: 'certificate',
-      title: 'Udemy React Course',
-      shortDescription: 'React - The Complete Guide.',
-      longDescription: 'Completed an in-depth course on React, covering everything from the basics to advanced concepts like state management with Redux, Next.js for server-side rendering, and more.',
+      title: 'Oracle Could Infrastructure 2025 Certified AI Foundations Associate',
+      shortDescription: 'Learnt the foundational concepts of AI and ML',
+      longDescription: 'Explore Machine Learning and Deep Learning Fundamentals: Dive into the basics of machine learning with an emphasis on supervised and unsupervised learning techniques. Gain insights into deep learning, exploring convolutional and sequence models like CNNs and RNNs and LSTMs.Get Started with OCIs AI Tools: Familiarize myself with OCI comprehensive AI tools portfolio.',
       imageUrl: findImage('certificate-3').imageUrl,
       imageHint: findImage('certificate-3').imageHint,
+      link: 'https://catalog-education.oracle.com/pls/certview/sharebadge?id=9E9B922FDCCE855CB8F125989ADEAB37A198F70CD0AA8447313F66990E313B8B',
     },
   ],
   // To change your education details, edit the array below
   education: [
     {
       degree: 'Bachelor of Technology in AI & Machine Learning',
-      institution: 'Vivekananda Institute of Professional Studies - Technical Campus',
+      institution: 'Vivekananda Institute of Professional Studies Technical Campus - Pitampura',
       period: '2022 - 2026',
-      details: 'Percentage - 80%'
     },
     {
       degree: 'Higher Secondary Certificate (Class 12th)',
       institution: 'Vidya Jain Public school - Rohini',
       period: '2020 - 2022',
-      details: 'Score: 80%.'
     },
     {
       degree: 'Secondary School Certificate (Class 10th)',
       institution: 'Vidya Jain Public school - Rohini',
       period: '2008 - 2020',
-      details: 'Score: 88%.'
     }
   ]
 };
