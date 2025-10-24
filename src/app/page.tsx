@@ -39,7 +39,7 @@ export default function Home() {
             <ProfileHeader profile={profile} counts={postCounts} education={education} />
             
             <section className="mt-12">
-              <h2 className="text-xl font-bold mb-4 text-white">Skills</h2>
+              <h2 className="text-xl font-bold mb-4 text-foreground">Skills</h2>
               <Highlights highlights={highlights} />
             </section>
 
