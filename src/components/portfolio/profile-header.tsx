@@ -17,6 +17,7 @@ import {
 import { useToast } from "@/hooks/use-toast";
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { InteractiveHoverButton } from '../ui/interactive-hover-button';
+import { HyperText } from '../ui/hyper-text';
 
 interface ProfileHeaderProps {
   profile: ProfileData;
@@ -70,7 +71,7 @@ export default function ProfileHeader({ profile, counts, education }: ProfileHea
 
       <div className="flex-grow w-full">
         <div className="flex flex-col sm:flex-row justify-between items-center mb-4">
-          <h1 className="text-2xl sm:text-3xl font-bold text-foreground">{profile.name}</h1>
+          <HyperText text={profile.name} className="text-2xl sm:text-3xl font-bold text-foreground" />
           <div className="flex items-center gap-2 mt-2 sm:mt-0">
              <InteractiveHoverButton asChild text="GitHub" href={profile.links.github} target="_blank" rel="noopener noreferrer" />
              <InteractiveHoverButton asChild text="LinkedIn" href={profile.links.linkedin} target="_blank" rel="noopener noreferrer" />
