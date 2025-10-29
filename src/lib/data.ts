@@ -43,7 +43,7 @@ export interface HighlightItem {
 // Defines the structure for each post (project, certificate, or achievement)
 export interface Post {
   id: string;
-  type: 'project' | 'certificate' | 'achievement';
+  type: 'project' | 'certificate' | 'achievement' | 'experience';
   title: string;
   shortDescription: string;
   longDescription: string;
@@ -108,6 +108,16 @@ export const portfolioData: PortfolioData = {
   ],
   // To change your projects, certificates, or achievements, edit the array below.
   posts: [
+    {
+      id: 'exp-1',
+      type: 'experience',
+      title: 'AI/ML Intern',
+      shortDescription: 'XYZ Tech - Summer 2024',
+      longDescription: 'Developed and implemented a recommendation engine using collaborative filtering, resulting in a 15% increase in user engagement. Worked with large datasets and built data pipelines for model training and evaluation.',
+      imageUrl: findImage('achievement-1').imageUrl,
+      imageHint: findImage('achievement-1').imageHint,
+      link: '#',
+    },
     {
       id: 'proj-1',
       type: 'project',

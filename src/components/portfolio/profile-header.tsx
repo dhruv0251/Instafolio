@@ -26,6 +26,7 @@ interface ProfileHeaderProps {
     projects: number;
     certificates: number;
     skills: number;
+    experience: number;
   };
 }
 
@@ -81,6 +82,7 @@ export default function ProfileHeader({ profile, counts, education }: ProfileHea
 
         <div className="hidden sm:flex justify-start items-center gap-8 mb-4">
           <StatItem count={counts.projects} label="Projects" />
+          <StatItem count={counts.experience} label="Experience" />
           <StatItem count={counts.certificates} label="Certificates" />
           <StatItem count={counts.skills} label="Skills" />
         </div>
@@ -92,6 +94,7 @@ export default function ProfileHeader({ profile, counts, education }: ProfileHea
 
         <div className="flex sm:hidden justify-around items-center my-4 py-2 border-y border-border">
           <StatItem count={counts.projects} label="Projects" />
+          <StatItem count={counts.experience} label="Experience" />
           <StatItem count={counts.certificates} label="Certificates" />
           <StatItem count={counts.skills} label="Skills" />
         </div>

@@ -27,6 +27,8 @@ export default function PostModal({ post, isOpen, onClose }: PostModalProps) {
         return 'View Certificate';
       case 'achievement':
         return 'View Proof';
+      case 'experience':
+        return 'View Details';
       default:
         return 'View';
     }

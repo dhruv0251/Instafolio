@@ -6,7 +6,7 @@ import ProfileHeader from '@/components/portfolio/profile-header';
 import Highlights from '@/components/portfolio/highlights';
 import PostsGrid from '@/components/portfolio/posts-grid';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Briefcase, GraduationCap } from 'lucide-react';
+import { Layers, GraduationCap, Briefcase } from 'lucide-react';
 import Footer from '@/components/portfolio/footer';
 import { motion } from 'framer-motion';
 
@@ -15,11 +15,13 @@ export default function Home() {
 
   const projects = posts.filter(p => p.type === 'project');
   const certificatesAndAchievements = posts.filter(p => p.type === 'certificate' || p.type === 'achievement');
+  const experience = posts.filter(p => p.type === 'experience');
 
   const postCounts = {
     projects: projects.length,
     certificates: certificatesAndAchievements.length,
     skills: highlights.length,
+    experience: experience.length
   };
 
   return (
@@ -48,10 +50,14 @@ export default function Home() {
             </div>
             
             <Tabs defaultValue="certs" className="w-full">
-              <TabsList className="grid w-full grid-cols-2">
+              <TabsList className="grid w-full grid-cols-3">
                 <TabsTrigger value="projects">
-                  <Briefcase className="mr-2 h-4 w-4" />
+                  <Layers className="mr-2 h-4 w-4" />
                   Projects
+                </TabsTrigger>
+                <TabsTrigger value="experience">
+                  <Briefcase className="mr-2 h-4 w-4" />
+                  Experience
                 </TabsTrigger>
                 <TabsTrigger value="certs">
                   <GraduationCap className="mr-2 h-4 w-4" />
@@ -60,6 +66,9 @@ export default function Home() {
               </TabsList>
               <TabsContent value="projects" className="mt-6">
                 <PostsGrid posts={projects} />
+              </TabsContent>
+              <TabsContent value="experience" className="mt-6">
+                <PostsGrid posts={experience} />
               </TabsContent>
               <TabsContent value="certs" className="mt-6">
                 <PostsGrid posts={certificatesAndAchievements} />
