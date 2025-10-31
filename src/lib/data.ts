@@ -76,8 +76,8 @@ export const portfolioData: PortfolioData = {
   // To change your profile information, edit the values below
   profile: {
     name: 'Dhruv Gola',
-    title: 'AI/ML Engineer',
-    bio: 'AI/ML Engineer | Video Editor | Loves Building & Automating Stuff',
+    title: 'BONJOUR !',
+    bio: 'AI/ML Engineer and Enthusiast dedicated to crafting delightful, performance-driven digital experiences. I leverage core AI/ML fundamentals, including Generative AI and NLP, to build smarter, utility-focused applications. I apply my engineering skills in deployment environments, always prioritizing robust architecture and end-to-end user satisfaction.',
     avatar: {
       url: findImage('profile').imageUrl,
       hint: findImage('profile').imageHint,
@@ -88,7 +88,7 @@ export const portfolioData: PortfolioData = {
       email: 'mailto:dhruv.0570.gola@gmail.com',
       phone: 'tel:+919873079928',
       // IMPORTANT: Replace this with the public link to your resume
-      resume: 'https://drive.google.com/file/d/1evGZRdqAyDnXcwVPMKSakJrc8JLMeO4M/view?usp=sharing',
+      resume: 'https://drive.google.com/file/d/1dyR1cbwRVCGjtVSnRe2g2HXao12AWHff/view?usp=sharing',
     },
   },
   // To change your skills, edit the array below. 
@@ -117,6 +117,15 @@ export const portfolioData: PortfolioData = {
       imageUrl: findImage('experience-1').imageUrl,
       imageHint: findImage('experience-1').imageHint,
       link: 'https://www.extioninfotech.com/',
+    },
+    {
+      id: 'exp-2',
+      type: 'experience',
+      title: 'Full Stack Development Intern',
+      shortDescription: '@ ByteBridge [june 2025 - August 2025]',
+      longDescription: 'The Internship involved comprehensively developing and deploying full-stack web applications, primarily leveraging Next.js and various database technologies to construct both dynamic frontend UI components and scalable backend REST APIs. This role required actively engaging in the complete end-to-end project lifecycle, which included critical stages like requirement analysis, hands-on coding, meticulous debugging, and final deployment, all contributing directly to enhancing overall application performance and guaranteeing a seamless user experience.',
+      imageUrl: findImage('experience-2').imageUrl,
+      imageHint: findImage('experience-2').imageHint,
     },
     {
       id: 'proj-1',
@@ -153,7 +162,7 @@ export const portfolioData: PortfolioData = {
       type: 'project',
       title: 'Instafolio',
       shortDescription: 'This Portfolio Website',
-      longDescription: 'AI/ML Engineer Portfolio Application: Developed and deployed a dynamic personal portfolio web application using Streamlit, designed to provide a comprehensive, interactive view of my technical capabilities. This platform seamlessly integrates data from GitHub and LinkedIn, allowing for the streamlined presentation of AI/ML projects, technical skills (including Python, TensorFlow, PyTorch, and NLP), and professional experience. By consolidating my digital footprint into an intuitive interface, this application effectively demonstrates my proficiency in web development, data aggregation, and my core expertise as an AI/ML Engineer, offering a superior and objective overview of my qualifications.',
+      longDescription: 'AI/ML Engineer Portfolio Application: Developed and deployed a dynamic, full-stack personal portfolio web application utilizing Next.js, Tailwind CSS, and Framer Motion for a responsive and engaging user experience. This platform seamlessly integrates data from GitHub and LinkedIn, allowing for the streamlined presentation of AI/ML projects, technical skills (including Python, TensorFlow, PyTorch, and NLP), and professional experience. By consolidating my digital footprint into an intuitive and visually refined interface, this application effectively demonstrates my proficiency in modern web development, data aggregation, and my core expertise as an AI/ML Engineer, offering a comprehensive and objective overview of my qualifications.',
       imageUrl: findImage('project-3').imageUrl,
       imageHint: findImage('project-3').imageHint,
       link: 'https://dhruvgola.vercel.app',
@@ -170,16 +179,6 @@ export const portfolioData: PortfolioData = {
 
     },
     {
-      id: 'proj-4',
-      type: 'project',
-      title: 'Portfolio Website',
-      shortDescription: 'This website!',
-      longDescription: 'This portfolio itself is a project, built with Next.js and Tailwind CSS to be a modern, responsive, and Instagram-inspired showcase of my work and skills.',
-      imageUrl: findImage('project-4').imageUrl,
-      imageHint: findImage('project-4').imageHint,
-      link: 'https://github.com/example/portfolio',
-    },
-    {
       id: 'cert-3',
       type: 'certificate',
       title: 'Oracle Could Infrastructure 2025 Certified AI Foundations Associate',
@@ -193,7 +192,7 @@ export const portfolioData: PortfolioData = {
   // To change your education details, edit the array below
   education: [
     {
-      degree: 'Bachelor of Technology in AI & Machine Learning',
+      degree: "Bachelor's in Technology in AI & Machine Learning",
       institution: 'Vivekananda Institute of Professional Studies Technical Campus - Pitampura',
       period: '2022 - 2026',
     },

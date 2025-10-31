@@ -3,7 +3,7 @@
     {
       "id": "profile",
       "description": "Profile photo of Dhruv Gola",
-      "imageUrl": "https://images.unsplash.com/photo-1508341591423-4347099e1f19?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bWFsZSUyMHBvcnRyYWl0fGVufDB8fHx8MTc2MDg0OTI2N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://i.postimg.cc/YqxHd4f3/file-00000000a6e4620a9413b981d4773756-1.png",
       "imageHint": "male portrait"
     },
     {
@@ -20,9 +20,9 @@
     },
     {
       "id": "project-3",
-      "description": "Thumbnail for a computer vision project.",
-      "imageUrl": "https://images.unsplash.com/photo-1551281306-0d52288970ad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjb21wdXRlciUyMHZpc2lvbnxlbnwwfHx8fDE3NjA3ODExNTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "computer vision"
+      "description": "Thumbnail for portfolio",
+      "imageUrl": "https://i.postimg.cc/BQHGyFhL/Gemini-Generated-Image-ksh1pksh1pksh1pk.png",
+      "imageHint": "portfolio"
     },
     {
       "id": "project-4",
@@ -70,6 +70,12 @@
       "id": "experience-1",
       "description": "Python Programming Internship",
       "imageUrl": "https://i.postimg.cc/zfGkJXXp/Chat-GPT-Image-Oct-29-2025-11-56-23-PM.png",
+      "imageHint": "open source"
+    },
+    {
+      "id": "experience-2",
+      "description": "Full Stack Development",
+      "imageUrl": "https://i.postimg.cc/WbcTnS2v/Chat-GPT-Image-Oct-31-2025-05-13-57-PM.png",
       "imageHint": "open source"
     }
   ]
