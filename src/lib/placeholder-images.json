@@ -14,8 +14,8 @@
     },
     {
       "id": "project-2",
-      "description": "Thumbnail for a natural language processing project.",
-      "imageUrl": "https://images.unsplash.com/photo-1672487729377-210da0b40bc0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxuYXR1cmFsJTIwbGFuZ3VhZ2V8ZW58MHx8fHwxNzYwODE1OTIwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Thumbnail for Candilyzer",
+      "imageUrl": "https://i.postimg.cc/02BzbWXB/Gemini-Generated-Image-gozpz0gozpz0gozp.png",
       "imageHint": "natural language"
     },
     {
@@ -64,6 +64,12 @@
       "id": "achievement-3",
       "description": "Open source contribution highlight.",
       "imageUrl": "https://images.unsplash.com/photo-1650600538903-ec09f670c391?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxvcGVuJTIwc291cmNlfGVufDB8fHx8MTc2MDg2MTI3M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "open source"
+    },
+    {
+      "id": "experience-1",
+      "description": "Python Programming Internship",
+      "imageUrl": "https://i.postimg.cc/zfGkJXXp/Chat-GPT-Image-Oct-29-2025-11-56-23-PM.png",
       "imageHint": "open source"
     }
   ]
