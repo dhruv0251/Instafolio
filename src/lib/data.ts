@@ -88,7 +88,7 @@ export const portfolioData: PortfolioData = {
       email: 'mailto:dhruv.0570.gola@gmail.com',
       phone: 'tel:+919873079928',
       // IMPORTANT: Replace this with the public link to your resume
-      resume: 'https://drive.google.com/file/d/1dyR1cbwRVCGjtVSnRe2g2HXao12AWHff/view?usp=sharing',
+      resume: 'https://drive.google.com/file/d/1v3W7er5_gLEcOmYGtdwAKVqFeU2azTX_/view?usp=sharing',
     },
   },
   // To change your skills, edit the array below. 
